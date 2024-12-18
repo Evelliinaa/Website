@@ -1,0 +1,248 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+header {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px;
+  
+}
+nav ul {
+    display: flex;
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+nav ul.left {
+    margin-right: auto; /* Push  HOME to the left */
+    font-size: 1.5rem;
+}
+
+nav ul.right {
+    display: flex; /* Align the right-side items in a row */
+    font-size: 1.5rem;
+}
+
+nav ul li {
+    margin: 0 20px; /* Add spacing between items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #000000; 
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/cover.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+    text-align: center;
+    padding: 70px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.scroll-button {
+    background-color: #F8F6F2;
+    color: rgb(0, 0, 0);
+    border: 0;
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.scroll-button:hover {
+    background-color: #879267;
+}
+
+/* Product Categorie */
+.product-categories {
+    display: flex; 
+    justify-content: center; 
+    gap: 70px; /* Add space between images */
+    margin: 150px 0; 
+    
+}
+.category {
+    text-align: left;
+    font-size: 20px;
+}
+
+.category img {
+    width: 100%;
+    max-width: 400pxpx;
+    height: auto;
+    border-radius: 0px;
+    transition: transform 0.3s;
+   
+}
+.category img:hover {
+    transform: scale(1.1);
+}
+
+/* Recipes Section */
+.recipes {
+    text-align: center;
+    padding: 20px;
+}
+
+.recipes h2 {
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+
+.recipe-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D4D6CC;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 800px;
+}
+
+.recipe-text {
+    padding: 20px;
+    text-align: left;
+}
+
+.recipe-text h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.recipe-text p {
+    margin-bottom: 10px;
+}
+
+.recipe-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    align-items: center;
+}
+
+.recipe-text button:hover {
+    background-color: #879267;
+}
+
+.recipe-card img {
+    width: 450px;
+    height: auto;
+}
+
+/*-------------------------- Responsivnes desktop--------------------------------------------------*/
+@media (max-width: 768px) {
+    /* Navigation Bar */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul.left, nav ul.right {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 50vh;
+    }
+
+    .scroll-button {
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+
+    /* Product Categories */
+    .product-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category {
+        width: 80%;
+        margin: 1rem 0;
+    }
+
+    /* Recipes Section */
+    .recipe-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe-card img {
+        width: 80%;
+    }
+
+    .recipe-text {
+        width: 80%;
+        margin-top: 1rem;
+    }
+}
+/*-------------------------- Responsivnes mobile--------------------------------------------------*/
+@media (max-width: 480px) {
+   
+    .hero {
+        height: 40vh;
+    }
+
+    .scroll-button {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .category img {
+        width: 90%;
+    }
+
+    .recipe-card img {
+        width: 90%;
+    }
+
+    .recipe-text {
+        width: 90%;
+    }
+}
